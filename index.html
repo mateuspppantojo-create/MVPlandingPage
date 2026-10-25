@@ -86,7 +86,7 @@
         /*Fontes, titulo e texto*/
         @font-face {
             font-family: 'title-text-font';
-            src: url('Fontes/heavitas/Heavitas.ttf');
+            src: url('/Fontes/heavitas/Heavitas.ttf');
         }
 
         /* Remove o realce padrão de toque em celulares. */
@@ -1016,16 +1016,7 @@
 
 
     <main id="conteudo">
-        <section class="hero" id="inicio" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="title-text-font" id="hero-title">BARBEARIA EM ARAÇOIABA DA SERRA<br><span class="font-talic">FAÇA VALER CADA DETALHE NA <br> 011 BARBER.</span></h1>
-                    <div class="hero-actions">
-                        <a class="button" href="#dados-contato">Consultar agendamento <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="hero-root"></div>
 
         <section class="benefits" id="servicos" aria-labelledby="services-title">
             <div class="container">
@@ -1267,6 +1258,7 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     </script>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

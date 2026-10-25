@@ -1,0 +1,211 @@
+.barber-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: min(800px, 100svh);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(5rem, 10vw, 8rem) max(1.125rem, calc((100vw - 1120px) / 2));
+  background: #171714;
+  color: #f2eee5;
+}
+
+.barber-hero__shade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(17, 17, 15, 0.97), rgba(17, 17, 15, 0.83) 43%, rgba(17, 17, 15, 0.24)),
+    linear-gradient(0deg, rgba(17, 17, 15, 0.9), transparent 72%),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=85")
+      62% center / cover;
+}
+
+.barber-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 780px);
+  padding-bottom: clamp(8rem, 17vw, 13rem);
+}
+
+.barber-hero__tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 0 1.4rem;
+  color: #f2eee5;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.barber-hero__mark {
+  display: inline-grid;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid #c9a66b;
+  border-radius: 50%;
+  color: #c9a66b;
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: 0;
+}
+
+.barber-hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12em;
+  max-width: 780px;
+  margin: 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.2rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.barber-hero__title-accent {
+  color: #c9a66b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.86em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.barber-hero__description {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: #d1cec5;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.barber-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.barber-hero__cta,
+.barber-hero__secondary {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.barber-hero__cta {
+  padding: 0.85rem 1.5rem;
+  border: 1px solid #c9a66b;
+  border-radius: 999px;
+  background: #c9a66b;
+  color: #171714;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.barber-hero__cta:hover {
+  background: transparent;
+  color: #f2eee5;
+}
+
+.barber-hero__cta i {
+  font-size: 1.2rem;
+}
+
+.barber-hero__secondary {
+  color: #f2eee5;
+  font-weight: 600;
+  text-underline-offset: 0.3em;
+}
+
+.barber-hero__secondary:hover {
+  color: #c9a66b;
+}
+
+.barber-hero__gallery {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: -1.5rem;
+  left: 0;
+  height: clamp(12rem, 34vh, 20rem);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 82%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 82%, transparent);
+}
+
+.barber-hero__track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  gap: 1rem;
+  will-change: transform;
+}
+
+.barber-hero__photo {
+  flex: 0 0 auto;
+  width: clamp(9rem, 17vw, 14rem);
+  height: 78%;
+  overflow: hidden;
+  border: 1px solid rgba(201, 166, 107, 0.5);
+  border-radius: 1rem;
+  background: #22221e;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.35);
+}
+
+.barber-hero__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .barber-hero {
+    min-height: min(800px, 100svh);
+    padding-inline: 1.125rem;
+  }
+
+  .barber-hero__content {
+    padding-bottom: 10rem;
+  }
+
+  .barber-hero__tagline {
+    align-items: flex-start;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .barber-hero__mark {
+    width: 2.1rem;
+    flex: 0 0 auto;
+  }
+
+  .barber-hero__gallery {
+    height: 15rem;
+  }
+
+  .barber-hero__photo {
+    width: 8.5rem;
+  }
+
+  .barber-hero__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barber-hero__cta {
+    transition: none;
+  }
+}
